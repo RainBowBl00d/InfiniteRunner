@@ -26,10 +26,10 @@ public class Player {
 
 	private enum AnimState { RUNNING, JUMPING, SLIDING }
 
-	private double jumpHeight = 14.0;
+	private double jumpHeight = 8.0;
 	private double minJumpHeight = 1.0;
 	private double slideHeight = 25;
-	private int slideDuration = 60;
+	private int slideDuration = 100;
 
 	private boolean huppabPraegu = false;
 
