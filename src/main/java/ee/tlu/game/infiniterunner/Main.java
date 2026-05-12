@@ -13,6 +13,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
+import java.nio.charset.*;
 
 import java.io.*;
 import java.util.*;
@@ -104,15 +105,24 @@ public class Main extends Application {
 		Button salvestaNupp = new Button("SALVESTA SKOOR");
 		salvestaNupp.setFont(Font.font("Arial", 20));
 		salvestaNupp.setStyle("-fx-background-color: #f39c12; -fx-text-fill: white; -fx-padding: 10 25;");
+
 		salvestaNupp.setOnAction(e -> {
-			String nimi = nimiVäli.getText().trim();
-			if (nimi.isEmpty()) {
-				nimi = "Anonüümne";
+			try {
+				String nimi = nimiVäli.getText().trim();
+				if (nimi.isEmpty()) {
+					nimi = "Anonüümne";
+				} else if (nimi.matches(".*\\d.*")) {
+					throw new ViganeMängijaNimi("Mängija nimi ei tohi sisaldada numbreid!");
+				}
+				salvestaSkoor(nimi, skoor);
+				nimiVäli.setDisable(true);
+				salvestaNupp.setDisable(true);
 			}
-			salvestaSkoor(nimi, skoor);
-			nimiVäli.setDisable(true);
-			salvestaNupp.setDisable(true);
+			catch (ViganeMängijaNimi erind) {
+				System.out.println("Mängija nimi ei tohi sisaldada numbreid!");
+			}
 		});
+
 
 		Button uuestiNupp = new Button("MÄNGI UUESTI");
 		uuestiNupp.setFont(Font.font("Arial", 24));
