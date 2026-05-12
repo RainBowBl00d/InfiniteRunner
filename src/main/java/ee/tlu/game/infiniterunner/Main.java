@@ -12,6 +12,10 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
+import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
+
 public class Main extends Application {
 	private Stage primaryStage;
 
@@ -96,6 +100,54 @@ public class Main extends Application {
 		double height = primaryStage.getHeight();
 		Scene gameOverStseen = new Scene(gameOverBox, width, height);
 		primaryStage.setScene(gameOverStseen);
+
+		String nimi = "BBB";
+		try {
+			Map<String, Integer> tulemused = loeFailist();
+			
+			if (tulemused.containsKey(nimi)) {
+				if (tulemused.get(nimi) < skoor)
+					tulemused.put(nimi, skoor);
+			} else
+				tulemused.put(nimi, skoor);
+			kirjutaFaili(tulemused);
+		}
+		catch (Exception e){
+			System.out.println("Skoori salvestamisel läks midagi persse!");
+		}
+	}
+
+	private void kirjutaFaili(Map<String,Integer> tulemused) {
+		try (OutputStream välja = new FileOutputStream("skoorid.dat");
+			 DataOutputStream kirjutaja = new DataOutputStream(välja)){
+			kirjutaja.write(tulemused.size());
+			for (String nimi : tulemused.keySet()) {
+				kirjutaja.writeUTF(nimi);
+				kirjutaja.write(tulemused.get(nimi));
+			}
+		}
+		catch (Exception e){
+			System.out.println("Faili kirjutamisel läks midagi valesti, tulemus ei pruukinud salvestuda.");
+		}
+	}
+
+	private static Map<String,Integer> loeFailist() throws IOException{
+		Map<String,Integer> tulemused = new HashMap<>();
+		File fail  = new File("skoorid.dat");
+		try (InputStream sisse = new FileInputStream(fail);
+			 DataInputStream lugeja = new DataInputStream(sisse)){
+			for (int i = 0; i < lugeja.read(); i++) {
+				tulemused.put(lugeja.readUTF(),lugeja.read());
+			}
+		}
+		catch (FileNotFoundException failPuudub){
+			fail.createNewFile();
+			return tulemused;
+		}
+		catch (Exception e){
+			System.out.println("Failist lugemisel läks midagi katki!");
+		}
+		return tulemused;
 	}
 
 	public static void main(String[] args) {
