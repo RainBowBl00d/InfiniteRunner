@@ -13,7 +13,7 @@ import javafx.scene.shape.Rectangle;
  * Haldab liikumist, hüppamist, sliidimist ja animatsiooni.
  */
 public class Player {
-	private static final double GRAVITATSIOON = 0.1;
+	private static final double GRAVITATSIOON = 0.05;
 	private static final int MAAPIND_Y = 300;
 	private static final int FRAME_WIDTH = 128;
 	private static final int FRAME_HEIGHT = 128;
@@ -26,7 +26,7 @@ public class Player {
 
 	private enum AnimState { RUNNING, JUMPING, SLIDING }
 
-	private double jumpHeight = 7.0;
+	private double jumpHeight = 3.5;
 	private double minJumpHeight = 1.0;
 	private double slideHeight = 25;
 	private int slideDuration = 100;
