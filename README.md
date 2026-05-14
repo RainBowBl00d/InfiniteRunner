@@ -9,7 +9,7 @@
 ## Projekti kirjeldus
 
 ### Eesmärk
-Infinite Runner on klassikaline lõputu jooksmise mäng, kus mängija (kollane tibu) peab vältima takistusi hüpates ja sliidides. Mängu eesmärk on koguda võimalikult palju punkte ellu jäädes nii kaua kui võimalik. Mäng muutub aja jooksul kiiremaks ja takistusi genereeritakse rohkem, muutes selle järjest keeriulisemaks.
+Infinite Runner on klassikaline lõputu jooksmise mäng, kus mängija (kollane tibu, ehk Peeter) peab vältima takistusi hüpates ja sliidides. Mängu eesmärk on koguda võimalikult palju punkte ellu jäädes nii kaua kui võimalik. Mäng muutub aja jooksul kiiremaks ja takistusi genereeritakse rohkem, muutes selle järjest keeriulisemaks.
 
 ### Programmi üldine töö
 Mäng on loodud JavaFX raamistiku abil ja koosneb mitmest põhikomponendist:
