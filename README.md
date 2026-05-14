@@ -109,6 +109,7 @@ Mäng kasutab animeeritud lindu (Peetrit) mängija erinevate tegevuste (jooksmin
 ### Etapp 6: Viimistlemine ja testimine
 - Bug-ide parandamine ja testimine
 - Füüsika lihvimine
+- Readme kirjutamine
 - **Osalejad:** Innar, Endel
 
 ---
@@ -120,7 +121,7 @@ Mäng kasutab animeeritud lindu (Peetrit) mängija erinevate tegevuste (jooksmin
 
 ### Endel, Innar
 **Tehtud klassid/meetodid:**
-- [Main.java - kõik menüüd ja UI]
+- [Main.java - menüü ja UI]
 - [GameScene.java - game loop ja kokkupõrked]
 
 **Ajakulu:** ~10 tundi
@@ -164,7 +165,7 @@ Mäng kasutab animeeritud lindu (Peetrit) mängija erinevate tegevuste (jooksmin
 ### Hästi õnnestus
 -  Toimiv füüsika süsteem (gravitatsioon, hüppamine)
 -  Binaarfailide salvestamine ja laadimine
--  UI ja menüüd
+-  UI ja menüü
 -  Mustripõhine takistuste süsteem
 
 ### Tulevikus
@@ -172,6 +173,7 @@ Mäng kasutab animeeritud lindu (Peetrit) mängija erinevate tegevuste (jooksmin
 - Helide ja muusika lisamine
 - Mitmekordne elu süsteem
 - Online scoreboard (hetkel ainult lokaalne)
+- Keerulisem punkisüsteem (punkte saaks ka teist moodi, kui takistustest möödudes)
 
 ---
 
@@ -187,4 +189,4 @@ Infinite Runner projekt õnnestus hästi ja kõik põhinõuded said täidetud. M
 Hästi struktureeritud kood, toimiv animatsioon, dünaamiline raskusaste ja kasutajasõbralik liides.
 
 **Edasiarenduse võimalused:** 
-Helid, rohkem funktsioone (Mitme tasandiline, mitu elu), online scoreboard.
+Helid, rohkem funktsioone (mitu elu), online scoreboard.
