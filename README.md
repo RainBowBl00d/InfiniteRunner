@@ -32,16 +32,6 @@ Mäng kasutab animeeritud lindu (Peetrit) mängija erinevate tegevuste (jooksmin
 3. Vältida madalatest takistustest hüpates ja kõrgetest takistustest alla sliidides
 4. Pärast mängu lõppu sisesta oma nimi ja salvesta tulemus
 
-**Tehnilised nõuded:**
-- Java 25 või uuem
-- JavaFX 21.0.6
-- Maven projekti haldamiseks
-
-**Käivitamine:**
-```bash
-mvn clean javafx:run
-```
-
 ---
 
 ## Klasside kirjeldus
@@ -124,7 +114,7 @@ mvn clean javafx:run
 ---
 
 ## Tehisintellekti kasutamine
-- Claude - Readme kirjutamiseks, linnu (Peetri) animeerimiseks (ise tegime ka)
+- Claude - Readme kirjutamiseks, Peetri animeerimiseks loogika abistamine
 
 ## Rühmaliikmete panus ja ajakulu
 
