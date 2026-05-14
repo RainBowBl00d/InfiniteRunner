@@ -124,7 +124,7 @@ mvn clean javafx:run
 ---
 
 ## Tehisintellekti kasutamine
-- Claude - Readme kirjutamiseks, linnu (Peetri) animeerimiseks
+- Claude - Readme kirjutamiseks, linnu (Peetri) animeerimiseks (ise tegime ka)
 
 ## Rühmaliikmete panus ja ajakulu
 
